@@ -1,5 +1,7 @@
 package com.mbahrami.bagstore.ui.screen.auth
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -365,4 +367,8 @@ private fun PasswordField(
             },
             onDone = { focusManager.clearFocus(force = true) })
     )
+}
+
+fun displayToast(context: Context, message: String) {
+    Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
